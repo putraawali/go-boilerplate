@@ -6,5 +6,5 @@ import (
 )
 
 type UserUsecaseContract interface {
-	GetByID(ctx context.Context, user_id int) (model.UserModel, error)
+	FindById(ctx context.Context, user_id int) (model.User, error)
 }

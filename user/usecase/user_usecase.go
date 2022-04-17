@@ -16,6 +16,6 @@ func NewUserUsecase(userRepository repository.UserRepositoryContract) UserUsecas
 	}
 }
 
-func (usecase *UserUsecase) GetByID(ctx context.Context, user_id int) (model.UserModel, error) {
-	return usecase.userRepo.GetByID(ctx, user_id)
+func (usecase *UserUsecase) FindById(ctx context.Context, user_id int) (model.User, error) {
+	return usecase.userRepo.FindById(ctx, user_id)
 }
